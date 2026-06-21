@@ -61,8 +61,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome:
       "Although it was never positioned as a fundraising campaign, the newsletter organically generated $10,000 in donations from a single issue and significantly increased community engagement.",
     samples: [
-      { label: "Newsletter — Issue A", url: "https://drive.google.com/file/d/11L6Y2iFE4M1nt4T9M6BilEnlI9pJmj7X/view?usp=drive_link" },
-      { label: "Newsletter — Issue B", url: "https://drive.google.com/file/d/1oiAEs12MkLdFhu3DoUOa8fylkMG8IIDN/view?usp=drive_link" },
+      { label: "Newsletter — Sample Issue (PDF)", url: newsletterIssue.url },
     ],
   },
   {
