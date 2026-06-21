@@ -29,11 +29,16 @@ export function PdfFlipbook({ url, title }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [pageWidth, setPageWidth] = useState(420);
 
+  // Client-only mount gate (react-pdf can't render during SSR).
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   // Reset on URL change.
   useEffect(() => {
     setSpread(0);
     setNumPages(0);
   }, [url]);
+
 
   // Responsive width: each page is ~half the container (minus gap), with a max.
   useEffect(() => {
