@@ -58,21 +58,21 @@ function Landing() {
 function Hero() {
   return (
     <section className="paper-grain border-b border-border">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1fr_1.5fr] md:gap-16 md:py-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-16 md:py-24">
         <div className="relative z-10">
           <p className="eyebrow flex items-center gap-3">
-            <span className="h-px w-10 bg-[var(--gold)]" /> Copywriting for mission-driven organizations & purpose-led brands
+            <span className="h-px w-10 bg-[var(--gold)]" /> COPYWRITING FOR MISSION-DRIVEN ORGANIZATIONS AND PURPOSE-LED BRANDS
           </p>
-          <h1 className="mt-6 font-serif text-[2.6rem] leading-[1.05] tracking-tight text-foreground md:text-[4.2rem]">
-            The Writer Your <span className="italic text-[color:var(--gold)]">Story</span> Needs
+          <h1 className="mt-6 font-serif text-4xl leading-[1.05] tracking-tight text-foreground md:text-5xl">
+            The Writer Your Story Needs
           </h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-foreground/85">
             Through emotive storytelling and data-based strategy, I'll help you reach the people who need you most —
-            and amplify the impact you were always meant to make. <span className="italic text-foreground/70">(And still have time for a coffee break.)</span>
+            and amplify the impact you were always meant to make. (And still have time for a coffee break.)
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <Link to="/work" className="btn-gold">
-              See My Work <ArrowUpRight className="h-4 w-4" />
+              See My Work
             </Link>
             <a href="#contact" className="btn-teal-outline">
               Get In Touch
@@ -89,7 +89,7 @@ function Hero() {
           <img
             src={wingedGlobe.url}
             alt="A watercolour illustration of a child being lifted into the air by a golden winged globe."
-            className="relative w-full select-none md:scale-110"
+            className="relative w-full select-none md:scale-125"
             loading="eager"
             decoding="async"
           />
@@ -131,7 +131,7 @@ function Dream() {
   return (
     <section className="paper-grain border-b border-border bg-[var(--cream)]">
       <div className="mx-auto max-w-2xl px-6 py-24 md:py-32">
-        <h2 className="font-serif text-[2rem] italic leading-tight text-foreground md:text-4xl text-center">
+        <h2 className="font-serif text-[2rem] leading-tight text-foreground md:text-4xl text-center">
           What if they came after you?
         </h2>
         <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/85">
@@ -145,11 +145,11 @@ function Dream() {
           <p>
             You need a hard-working partner. Someone to uncover the magic that is already there
             and write your story so that your audience gets it. Let the words do the hard work —
-            you go move mountains. <span className="italic">(Or take a nap. I firmly believe in siestas.)</span>
+            you go move mountains. (Or take a nap. I firmly believe in siestas.)
           </p>
         </div>
         <div className="mt-12 text-center">
-          <a href="#contact" className="btn-gold">Get In Touch <ArrowUpRight className="h-4 w-4" /></a>
+          <a href="#contact" className="btn-gold">Get In Touch</a>
         </div>
       </div>
     </section>
@@ -171,11 +171,11 @@ function About() {
   return (
     <section id="about" className="border-b border-border">
       <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
-        <p className="eyebrow text-center">Every good story has a hero. And every good hero has a guide.</p>
+        <p className="eyebrow text-center">EVERY GOOD STORY HAS A HERO. AND EVERY GOOD HERO HAS A GUIDE.</p>
 
         <div className="mt-6 flex items-start justify-center gap-4">
-          <h2 className="font-serif text-5xl leading-tight text-foreground md:text-6xl">
-            Hi, I'm <span className="italic text-[color:var(--gold)]">Ettel</span>.
+          <h2 className="font-serif text-4xl leading-tight text-foreground">
+            Hi, I'm Ettel.
           </h2>
           <div className="relative hidden pt-2 md:block">
             <CurlyArrow className="h-10 w-20 text-[color:var(--gold)]" />
@@ -202,8 +202,7 @@ function About() {
             be told — and I still haven't outgrown that.
           </p>
           <p>
-            There's nothing I love more than stories — except maybe people.{" "}
-            <span className="italic text-foreground/70">(And pretty coffee mugs and new leather notebooks.)</span>
+            There's nothing I love more than stories — except maybe people. (And pretty coffee mugs and new leather notebooks.)
           </p>
           <p>
             I believe that every person has a story and every story has a little bit of magic
@@ -226,7 +225,7 @@ function About() {
           <p>
             My people-connecting skills, background in psychology, and love of words combine to
             help you reach your audience with empathy, warmth, and wit — so that you can focus on
-            the bigger things. <span className="italic text-foreground/70">(Or take a nap. I firmly believe in siestas.)</span>
+            the bigger things. (Or take a nap. I firmly believe in siestas.)
           </p>
         </div>
 
@@ -281,7 +280,7 @@ function WhoIWorkWith() {
           Ok. Enough about me. Tell me about yourself.
         </p>
         <h2 className="mt-6 text-center font-serif text-4xl leading-tight text-foreground md:text-5xl">
-          Are you a<span className="italic text-[color:var(--gold)]">…</span>
+          Are you a…
         </h2>
 
         <div className="mt-14 grid gap-14 md:grid-cols-2">
@@ -353,7 +352,7 @@ function Services() {
         <div className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">Services</p>
           <h2 className="mt-4 font-serif text-4xl leading-tight text-foreground md:text-5xl">
-            Let me help you <span className="italic text-[color:var(--gold)]">help them</span>.
+            Let me help you help them.
           </h2>
         </div>
 
