@@ -303,7 +303,7 @@ function WhoIWorkWith() {
 
           <div className="md:pt-4">
             <div className="rounded-2xl border border-border bg-[var(--cream)] p-8 md:sticky md:top-28 md:p-10">
-              <p className="eyebrow text-[color:var(--gold)]">Let's…</p>
+              <p className="font-serif text-2xl text-foreground">Let's:</p>
               <ul className="mt-6 space-y-4">
                 {DELIVERABLES.map((d) => (
                   <li key={d} className="flex gap-3 text-base leading-relaxed text-foreground/85">
@@ -312,9 +312,6 @@ function WhoIWorkWith() {
                   </li>
                 ))}
               </ul>
-              <a href="#contact" className="btn-gold mt-8">
-                Get In Touch <ArrowUpRight className="h-4 w-4" />
-              </a>
             </div>
           </div>
         </div>
