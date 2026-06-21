@@ -518,7 +518,7 @@ function Values() {
             Get your happily-ever-after.
           </h2>
           <p className="mt-8 font-serif text-2xl italic leading-snug text-[color:var(--amber)]">
-            Don't come across like a sleazy car salesman when you're a changemaker.
+            {"\n"}
           </p>
         </div>
 
