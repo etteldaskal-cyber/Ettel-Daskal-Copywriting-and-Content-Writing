@@ -39,9 +39,8 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Over 12,500 copies of the Torah Nugget educational resource printed and distributed, with the series continuing as a flagship Torah Mate publication.",
     samples: [
       { label: "Matan Torah — full issue (PDF)", url: matanTorah.url },
-      { label: "Sample issue — Spread 1", url: "https://drive.google.com/file/d/1V6KxTOL3pBezHqtPi8n8gqlq5QZoSdbY/view?usp=drive_link" },
-      { label: "Sample issue — Spread 2", url: "https://drive.google.com/file/d/1oEEBPi6F3c50Lj0-7Mu72b4c4-if5NPN/view?usp=drive_link" },
-      { label: "Sample issue — Spread 3", url: "https://drive.google.com/file/d/1QjzGVqAvaaPLFoTDidpkePZGRqZD2SSH/view?usp=drive_link" },
+      { label: "Torah Nugget — Sample 1 (PDF)", url: torahSample1.url },
+      { label: "Torah Nugget — Sample 2 (PDF)", url: torahSample2.url },
     ],
   },
   {
