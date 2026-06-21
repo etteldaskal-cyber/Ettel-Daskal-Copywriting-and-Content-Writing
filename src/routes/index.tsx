@@ -333,21 +333,21 @@ function WhoIWorkWith() {
 /* ---------------- SECTION 6 — SERVICES ---------------- */
 const SERVICES = [
   {
-    icon: PenLine,
+    art: iconCopywriting.url,
     title: "Copywriting",
     body: "Websites, emails, newsletters, donor appeals, campaigns, social content — and whatever else your mission needs.",
     aka: "a.k.a. words that connect, persuade, and inspire action.",
     category: "copywriting" as const,
   },
   {
-    icon: Sparkles,
+    art: iconStorytelling.url,
     title: "Organizational Storytelling",
     body: "Donor impact books, event songs, scripts, campaign content, impact reports.",
     aka: "a.k.a. finding the human story inside your data and making people feel it.",
     category: "organizational-storytelling" as const,
   },
   {
-    icon: GraduationCap,
+    art: iconEducation.url,
     title: "Educational Content",
     body: "Curriculum, lesson plans, educational series, children's content.",
     aka: "a.k.a. bringing ideas to life with writing that's clear, deep, and genuinely engaging.",
