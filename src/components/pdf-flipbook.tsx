@@ -121,6 +121,7 @@ export function PdfFlipbook({ url, title }: Props) {
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
+        {mounted ? (
         <Document
           file={url}
           onLoadSuccess={({ numPages }) => setNumPages(numPages)}
@@ -135,6 +136,7 @@ export function PdfFlipbook({ url, title }: Props) {
             </div>
           }
         >
+
           <div
             className={
               "mx-auto flex items-stretch justify-center gap-1 " +
