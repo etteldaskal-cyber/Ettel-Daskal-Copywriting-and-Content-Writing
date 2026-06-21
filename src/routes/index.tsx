@@ -352,7 +352,7 @@ function Services() {
         <div className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">Services</p>
           <h2 className="mt-4 font-serif text-4xl leading-tight text-foreground md:text-5xl">
-            Let me help you <span className="italic text-[color:var(--gold)]">help them</span>.
+            Let me help you help them.
           </h2>
         </div>
 
