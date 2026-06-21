@@ -121,7 +121,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome:
       "A polished, gift-quality publication that gave the organization a lasting way to thank, retain, and deepen relationships with key donors.",
     samples: [
-      { label: "View the book (Google Drive folder)", url: "https://drive.google.com/drive/folders/1AlWC33iUxReG_ig7_uKiAJzdTxCoLz0X?usp=drive_link" },
+      { label: "Founding the Future (PDF)", url: foundingTheFuture.url },
     ],
     layout: "book",
   },
