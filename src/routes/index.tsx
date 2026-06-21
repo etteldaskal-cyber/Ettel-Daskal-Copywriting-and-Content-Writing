@@ -544,7 +544,7 @@ function GentleNudge() {
           to find you.
         </p>
         <div className="mt-10">
-          <a href="#contact" className="btn-gold">Get In Touch <ArrowUpRight className="h-4 w-4" /></a>
+          <a href="#contact" className="btn-gold">Get In Touch</a>
         </div>
       </div>
     </section>
