@@ -280,7 +280,7 @@ function WhoIWorkWith() {
           Ok. Enough about me. Tell me about yourself.
         </p>
         <h2 className="mt-6 text-center font-serif text-4xl leading-tight text-foreground md:text-5xl">
-          Are you a<span className="italic text-[color:var(--gold)]">…</span>
+          Are you a…
         </h2>
 
         <div className="mt-14 grid gap-14 md:grid-cols-2">
