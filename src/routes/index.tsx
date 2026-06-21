@@ -131,7 +131,7 @@ function Dream() {
   return (
     <section className="paper-grain border-b border-border bg-[var(--cream)]">
       <div className="mx-auto max-w-2xl px-6 py-24 md:py-32">
-        <h2 className="font-serif text-[2rem] italic leading-tight text-foreground md:text-4xl text-center">
+        <h2 className="font-serif text-[2rem] leading-tight text-foreground md:text-4xl text-center">
           What if they came after you?
         </h2>
         <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/85">
@@ -145,11 +145,11 @@ function Dream() {
           <p>
             You need a hard-working partner. Someone to uncover the magic that is already there
             and write your story so that your audience gets it. Let the words do the hard work —
-            you go move mountains. <span className="italic">(Or take a nap. I firmly believe in siestas.)</span>
+            you go move mountains. (Or take a nap. I firmly believe in siestas.)
           </p>
         </div>
         <div className="mt-12 text-center">
-          <a href="#contact" className="btn-gold">Get In Touch <ArrowUpRight className="h-4 w-4" /></a>
+          <a href="#contact" className="btn-gold">Get In Touch</a>
         </div>
       </div>
     </section>
