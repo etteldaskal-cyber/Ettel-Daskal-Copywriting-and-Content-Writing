@@ -4,6 +4,7 @@ import { PenLine, Sparkles, GraduationCap, Heart, BookOpen, Globe2, Building2, C
 
 import { SiteNav, SiteFooter } from "@/components/site-chrome";
 import wingedGlobe from "@/assets/winged-globe.png.asset.json";
+import ettelBio from "@/assets/ettel-bio.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
