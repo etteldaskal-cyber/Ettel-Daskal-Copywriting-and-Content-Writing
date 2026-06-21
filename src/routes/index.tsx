@@ -1,10 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { PenLine, Sparkles, GraduationCap, Heart, BookOpen, Globe2, Building2, Coffee, Search, FileText } from "lucide-react";
+import { Globe2, Building2, Coffee, Search, FileText, BookOpen, Heart } from "lucide-react";
 
 
 import { SiteNav, SiteFooter } from "@/components/site-chrome";
 import wingedGlobe from "@/assets/winged-globe.png.asset.json";
 import ettelBio from "@/assets/ettel-bio.png.asset.json";
+import clippedWings from "@/assets/clipped-wings.png.asset.json";
+import sunMotif from "@/assets/sun-motif.png.asset.json";
+import iconCopywriting from "@/assets/icon-copywriting.png.asset.json";
+import iconStorytelling from "@/assets/icon-storytelling.png.asset.json";
+import iconEducation from "@/assets/icon-education.png.asset.json";
+import processPath from "@/assets/process-path.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
