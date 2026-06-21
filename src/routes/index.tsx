@@ -171,11 +171,11 @@ function About() {
   return (
     <section id="about" className="border-b border-border">
       <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
-        <p className="eyebrow text-center">Every good story has a hero. And every good hero has a guide.</p>
+        <p className="eyebrow text-center">EVERY GOOD STORY HAS A HERO. AND EVERY GOOD HERO HAS A GUIDE.</p>
 
         <div className="mt-6 flex items-start justify-center gap-4">
-          <h2 className="font-serif text-5xl leading-tight text-foreground md:text-6xl">
-            Hi, I'm <span className="italic text-[color:var(--gold)]">Ettel</span>.
+          <h2 className="font-serif text-4xl leading-tight text-foreground">
+            Hi, I'm Ettel.
           </h2>
           <div className="relative hidden pt-2 md:block">
             <CurlyArrow className="h-10 w-20 text-[color:var(--gold)]" />
@@ -202,8 +202,7 @@ function About() {
             be told — and I still haven't outgrown that.
           </p>
           <p>
-            There's nothing I love more than stories — except maybe people.{" "}
-            <span className="italic text-foreground/70">(And pretty coffee mugs and new leather notebooks.)</span>
+            There's nothing I love more than stories — except maybe people. (And pretty coffee mugs and new leather notebooks.)
           </p>
           <p>
             I believe that every person has a story and every story has a little bit of magic
@@ -226,7 +225,7 @@ function About() {
           <p>
             My people-connecting skills, background in psychology, and love of words combine to
             help you reach your audience with empathy, warmth, and wit — so that you can focus on
-            the bigger things. <span className="italic text-foreground/70">(Or take a nap. I firmly believe in siestas.)</span>
+            the bigger things. (Or take a nap. I firmly believe in siestas.)
           </p>
         </div>
 
