@@ -57,8 +57,8 @@ function Landing() {
 /* ---------------- HERO ---------------- */
 function Hero() {
   return (
-    <section className="paper-grain overflow-hidden border-b border-border">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1fr_1.2fr] md:gap-16 md:py-24">
+    <section className="paper-grain border-b border-border">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1fr_1.5fr] md:gap-16 md:py-24">
         <div className="relative z-10">
           <p className="eyebrow flex items-center gap-3">
             <span className="h-px w-10 bg-[var(--gold)]" /> Copywriting for mission-driven organizations & purpose-led brands
