@@ -1,4 +1,7 @@
 import matanTorah from "@/assets/matan-torah.pdf.asset.json";
+import torahSample1 from "@/assets/torah-nugget-sample-1.pdf.asset.json";
+import torahSample2 from "@/assets/torah-nugget-sample-2.pdf.asset.json";
+import newsletterIssue from "@/assets/newsletter-issue.pdf.asset.json";
 
 export type CaseStudy = {
   slug: string;
@@ -36,9 +39,8 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Over 12,500 copies of the Torah Nugget educational resource printed and distributed, with the series continuing as a flagship Torah Mate publication.",
     samples: [
       { label: "Matan Torah — full issue (PDF)", url: matanTorah.url },
-      { label: "Sample issue — Spread 1", url: "https://drive.google.com/file/d/1V6KxTOL3pBezHqtPi8n8gqlq5QZoSdbY/view?usp=drive_link" },
-      { label: "Sample issue — Spread 2", url: "https://drive.google.com/file/d/1oEEBPi6F3c50Lj0-7Mu72b4c4-if5NPN/view?usp=drive_link" },
-      { label: "Sample issue — Spread 3", url: "https://drive.google.com/file/d/1QjzGVqAvaaPLFoTDidpkePZGRqZD2SSH/view?usp=drive_link" },
+      { label: "Torah Nugget — Sample 1 (PDF)", url: torahSample1.url },
+      { label: "Torah Nugget — Sample 2 (PDF)", url: torahSample2.url },
     ],
   },
   {
@@ -59,8 +61,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome:
       "Although it was never positioned as a fundraising campaign, the newsletter organically generated $10,000 in donations from a single issue and significantly increased community engagement.",
     samples: [
-      { label: "Newsletter — Issue A", url: "https://drive.google.com/file/d/11L6Y2iFE4M1nt4T9M6BilEnlI9pJmj7X/view?usp=drive_link" },
-      { label: "Newsletter — Issue B", url: "https://drive.google.com/file/d/1oiAEs12MkLdFhu3DoUOa8fylkMG8IIDN/view?usp=drive_link" },
+      { label: "Newsletter — Sample Issue (PDF)", url: newsletterIssue.url },
     ],
   },
   {
