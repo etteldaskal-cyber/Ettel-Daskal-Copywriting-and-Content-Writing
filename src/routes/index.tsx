@@ -145,8 +145,16 @@ function Pain() {
 /* ---------------- SECTION 3 — DREAM ---------------- */
 function Dream() {
   return (
-    <section className="paper-grain border-b border-border bg-[var(--cream)]">
-      <div className="mx-auto max-w-2xl px-6 py-24 md:py-32">
+    <section className="paper-grain relative overflow-hidden border-b border-border bg-[var(--cream)]">
+      <img
+        src={sunMotif.url}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 select-none opacity-25 md:h-96 md:w-96"
+        loading="lazy"
+        decoding="async"
+      />
+      <div className="relative mx-auto max-w-2xl px-6 py-24 md:py-32">
         <h2 className="font-serif text-[2rem] leading-tight text-foreground md:text-4xl text-center">
           What if they came after you?
         </h2>
