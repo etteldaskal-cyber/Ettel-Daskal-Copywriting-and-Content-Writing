@@ -106,7 +106,7 @@ function CategoryPage() {
             </div>
           </section>
         ) : (
-          items.map((cs) =>
+          items.map((cs: CaseStudy) =>
             cs.hasCaseStudy ? (
               <CaseStudyCard key={cs.slug} cs={cs} />
             ) : (
