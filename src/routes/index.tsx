@@ -11,7 +11,7 @@ import sunMotif from "@/assets/sun-motif.png.asset.json";
 import processPath from "@/assets/process-path.png.asset.json";
 import quill from "@/assets/quill.jpg.asset.json";
 import spelling from "@/assets/spelling.jpg.asset.json";
-import envelope from "@/assets/envelope.jpg.asset.json";
+import envelopeTransparent from "@/assets/envelope-transparent.png.asset.json";
 import magnifier from "@/assets/magnifier.jpg.asset.json";
 import hats from "@/assets/hats.jpg.asset.json";
 import plants from "@/assets/plants.jpg.asset.json";
@@ -662,17 +662,15 @@ function Contact() {
   return (
     <section id="contact" className="bg-background">
       <div className="mx-auto max-w-[680px] px-6 py-28 text-center md:py-36">
-        <div className="flex justify-center">
-          <img
-            src={envelope.url}
-            alt=""
-            aria-hidden
-            className="select-none illustration"
-            style={{ maxWidth: "320px", display: "block", margin: "0 auto 2rem", objectFit: "contain" }}
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
+        <img
+          src={envelopeTransparent.url}
+          alt=""
+          aria-hidden
+          className="select-none"
+          style={{ width: "300px", height: "auto", display: "block", margin: "0 auto 2rem", mixBlendMode: "multiply" }}
+          loading="lazy"
+          decoding="async"
+        />
         <h2 className="mt-6 font-serif text-4xl leading-tight text-foreground md:text-5xl">
           Let's talk.
         </h2>
