@@ -193,7 +193,7 @@ function Dream() {
             <span className="block text-2xl font-serif italic text-[color:var(--gold)] mb-3">
               You need a hard-working partner.
             </span>
-            {"\n\n"}
+            {"\n"}
             Someone to uncover the magic that is already there and write your story so that your audience gets it.{"\n\n"}
           </p>
         </div>
