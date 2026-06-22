@@ -7,8 +7,6 @@ import wingedGlobe from "@/assets/winged-globe.png.asset.json";
 import ettelBio from "@/assets/ettel-bio-transparent.png.asset.json";
 import clippedWings from "@/assets/clipped-wings.png.asset.json";
 import sunMotif from "@/assets/sun-motif.png.asset.json";
-import iconCopywriting from "@/assets/icon-copywriting.png.asset.json";
-import iconEducation from "@/assets/icon-education.png.asset.json";
 import processPath from "@/assets/process-path.png.asset.json";
 import quill from "@/assets/quill.jpg.asset.json";
 import spelling from "@/assets/spelling.jpg.asset.json";
@@ -16,7 +14,6 @@ import envelope from "@/assets/envelope.jpg.asset.json";
 import magnifier from "@/assets/magnifier.jpg.asset.json";
 import hats from "@/assets/hats.jpg.asset.json";
 import plants from "@/assets/plants.jpg.asset.json";
-import telephone from "@/assets/pink-telephone.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
