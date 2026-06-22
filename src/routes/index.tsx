@@ -529,7 +529,7 @@ const STEPS = [
   {
     n: "02",
     icon: null,
-    art: magnifier.url,
+    art: null,
     title: "I Dig In",
     body: "I find the story underneath your work — the magic that was always there. I research until I know what keeps your audience up at night and what makes them laugh out loud.",
   },
