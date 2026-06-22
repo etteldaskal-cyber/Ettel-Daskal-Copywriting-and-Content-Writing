@@ -4,7 +4,7 @@ import { Globe2, Building2, Coffee, BookOpen, Heart } from "lucide-react";
 
 import { SiteNav, SiteFooter } from "@/components/site-chrome";
 import wingedGlobe from "@/assets/winged-globe.png.asset.json";
-import ettelBio from "@/assets/ettel-bio.png.asset.json";
+import ettelBio from "@/assets/ettel-bio-transparent.png.asset.json";
 import clippedWings from "@/assets/clipped-wings.png.asset.json";
 import sunMotif from "@/assets/sun-motif.png.asset.json";
 import iconCopywriting from "@/assets/icon-copywriting.png.asset.json";
@@ -87,16 +87,16 @@ function PlantsDivider() {
 function Hero() {
   return (
     <section className="paper-grain border-b border-border">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-16 md:py-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2 md:gap-16" style={{ paddingTop: "120px", paddingBottom: "120px" }}>
         <div className="relative z-10">
-          <p className="eyebrow flex items-start gap-3">
+          <p className="flex items-start gap-3" style={{ fontFamily: "var(--font-sans)", fontSize: "11px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8C7A62" }}>
             <span className="mt-2.5 h-px w-10 bg-[var(--gold)] shrink-0" />
             <span>COPY & WRITING FOR <span className="text-[color:var(--gold)]">MISSION-DRIVEN</span> ORGANIZATIONS AND <span className="text-[color:var(--gold)]">PURPOSE-LED</span> BRANDS</span>
           </p>
-          <h1 className="mt-6 font-serif text-4xl leading-[1.05] tracking-tight text-foreground md:text-5xl">
+          <h1 className="mt-6 font-serif leading-[1.05] tracking-tight text-foreground" style={{ fontSize: "52px" }}>
             The Writer Your Story Needs
           </h1>
-          <p className="mt-7 max-w-xl text-lg leading-loose text-foreground/85">
+          <p className="mt-7 text-foreground/85" style={{ fontSize: "18px", lineHeight: 1.8, maxWidth: "520px" }}>
             Through emotive storytelling and data-based strategy, I'll move your audience to act&nbsp;&nbsp;—&nbsp;so you can focus on changing the world (and still have time for a coffee break.)&nbsp;
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -122,7 +122,8 @@ function Hero() {
           <img
             src={wingedGlobe.url}
             alt="A watercolour illustration of a child being lifted into the air by a golden winged globe."
-            className="relative w-full select-none md:scale-125"
+            className="relative w-full select-none illustration"
+            style={{ maxWidth: "520px", margin: "0 auto" }}
             loading="eager"
             decoding="async"
           />
@@ -136,11 +137,11 @@ function Hero() {
 function Pain() {
   return (
     <section className="border-b border-border">
-      <div className="mx-auto max-w-xl px-6 py-32 md:py-40">
-        <h2 className="font-serif text-[2rem] leading-tight text-foreground md:text-4xl text-center">
+      <div className="mx-auto max-w-xl px-6">
+        <h2 className="font-serif leading-tight text-foreground text-center">
           You don't have time to chase after your audience.
         </h2>
-        <div className="mt-14 space-y-10 text-lg leading-loose text-foreground/85">
+        <div className="mt-14 space-y-6 text-foreground/85">
           <p className="whitespace-pre-line text-left">
             You know you have valuable things to share.{"\n"}
             You know you can impact lives and make a difference.{"\n"}
@@ -154,11 +155,12 @@ function Pain() {
           src={clippedWings.url}
           alt=""
           aria-hidden
-          className="mx-auto mt-16 h-28 w-auto select-none opacity-90"
+          className="mx-auto mt-10 select-none illustration"
+          style={{ maxWidth: "120px", display: "block" }}
           loading="lazy"
           decoding="async"
         />
-        <p className="mt-6 text-center font-serif text-3xl italic leading-snug text-[color:var(--rose)] md:text-4xl">
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "24px", textAlign: "center", margin: "2rem 0", color: "#2C2218" }}>
           Your wings are clipped.
         </p>
       </div>
@@ -178,23 +180,22 @@ function Dream() {
         loading="lazy"
         decoding="async"
       />
-      <div className="relative mx-auto max-w-xl px-6 py-32 md:py-40">
-        <h2 className="font-serif text-[2rem] leading-tight text-foreground md:text-4xl text-center">
+      <div className="relative mx-auto max-w-xl px-6">
+        <h2 className="font-serif leading-tight text-foreground text-center">
           What if they came after you?
         </h2>
-        <div className="mt-14 space-y-10 text-lg leading-loose text-foreground/85">
+        <div className="mt-14 space-y-6 text-foreground/85">
           <p className="whitespace-pre-line text-left">
             What if your ideal audience found you on their own?&nbsp;{"\n\n"}
             What if the people you most want to reach came to you for the opportunity to have a part in the beautiful world you are building?{"\n\n"}
             What if your website did the talking — so that when people reached out, they were already sold on what you offer the world?&nbsp;{"\n\n"}
             What if you never had to feel like a desperate car salesman instead of the changemaker that you are?
           </p>
-          <p className="whitespace-pre-line">
-            <span className="block text-2xl font-serif italic text-[color:var(--gold)] mb-3">
-              You need a hard-working partner.
-            </span>
-            {"\n"}
-            Someone to uncover the magic that is already there and write your story so that your audience gets it.{"\n\n"}
+          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "20px", color: "var(--gold)", textAlign: "center", margin: "2rem 0" }}>
+            You need a hard-working partner.
+          </p>
+          <p>
+            Someone to uncover the magic that is already there and write your story so that your audience gets it.
           </p>
         </div>
         <div className="mt-14 text-center">
