@@ -234,19 +234,16 @@ function About() {
 
         <div className="mt-14">
           <div className="space-y-6 text-foreground/85">
-            <p className="whitespace-pre-line">
-              I'm a wife and a mother and a teacher and a friend. I'm an actress, an artist,&nbsp;{"\n"}
-              and an almost-psychologist (I dropped out mid-Master's and chose to brighten{"\n"}
-              the world with storytelling instead.)
-              <img
-                src={sunMotif.url}
-                alt=""
-                aria-hidden
-                className="illustration"
-                style={{ maxWidth: "80px", float: "right", margin: "0 0 1rem 1.5rem", objectFit: "contain" }}
-                loading="lazy"
-                decoding="async"
-              />
+            <img
+              src={sunMotif.url}
+              alt=""
+              aria-hidden
+              className="illustration sun-float"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>
+              I'm a wife and a mother and a teacher and a friend. I'm an actress, an artist, and an almost-psychologist (I dropped out mid-Master's and chose to brighten the world with storytelling instead.)
             </p>
             <p>
               <img
