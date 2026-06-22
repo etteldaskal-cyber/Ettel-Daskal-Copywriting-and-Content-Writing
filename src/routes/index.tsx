@@ -541,7 +541,7 @@ const STEPS = [
   {
     n: "03",
     icon: null,
-    art: envelope.url,
+    art: null as string | null,
     title: "The Words Come",
     body: "I write. You review. We refine until every word is exactly right.",
   },
@@ -587,7 +587,7 @@ function Process() {
           src={processPath.url}
           alt=""
           aria-hidden
-          className="mx-auto mt-12 w-full max-w-4xl select-none opacity-70"
+          className="mx-auto mt-12 w-full max-w-4xl select-none illustration"
           loading="lazy"
           decoding="async"
         />
@@ -625,11 +625,14 @@ function Values() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-10 md:grid-cols-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
           {VALUES.map((v) => (
-            <div key={v.title} className="border-t border-background/20 pt-6">
-              <h3 className="font-serif text-2xl text-background">{v.title}</h3>
-              <p className="mt-3 text-base leading-loose text-background/80">{v.body}</p>
+            <div
+              key={v.title}
+              style={{ background: "#F2EAD8", borderRadius: "12px", padding: "1.5rem", border: "1px solid #E0D0B8" }}
+            >
+              <h3 className="font-serif text-2xl" style={{ color: "#2C2218" }}>{v.title}</h3>
+              <p className="mt-3 text-base leading-loose" style={{ color: "#2C2218" }}>{v.body}</p>
             </div>
           ))}
         </div>
@@ -668,10 +671,11 @@ function Contact() {
       <div className="mx-auto max-w-xl px-6 py-28 text-center md:py-36">
         <div className="flex justify-center">
           <img
-            src={telephone.url}
+            src={envelope.url}
             alt=""
             aria-hidden
-            className="h-48 w-auto select-none object-contain mix-blend-multiply md:h-56"
+            className="select-none illustration"
+            style={{ maxWidth: "320px", display: "block", margin: "0 auto 2rem", objectFit: "contain" }}
             loading="lazy"
             decoding="async"
           />
