@@ -599,10 +599,10 @@ const VALUES = [
 
 function Values() {
   return (
-    <section className="border-b border-border bg-foreground text-background">
+    <section className="border-b border-border" style={{ backgroundColor: "#2C2218" }}>
       <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
         <div className="mx-auto max-w-[680px] text-center">
-          <h2 className="font-serif text-4xl leading-tight md:text-5xl">
+          <h2 className="font-serif text-4xl leading-tight md:text-5xl" style={{ color: "#FAF7F0" }}>
             Get your happily-ever-after.
           </h2>
           <p className="mt-8 font-serif text-2xl italic leading-snug text-[color:var(--amber)]">
@@ -610,11 +610,11 @@ function Values() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mt-16" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
           {VALUES.map((v) => (
             <div key={v.title} className="value-card">
               <h3 className="font-serif text-[22px]" style={{ color: "#E8B86D", marginBottom: "0.75rem" }}>{v.title}</h3>
-              <p className="text-base leading-relaxed" style={{ color: "#FAF7F0", opacity: 0.85, fontFamily: "var(--font-sans)" }}>{v.body}</p>
+              <p className="text-base leading-relaxed" style={{ color: "#FAF7F0", fontFamily: "var(--font-sans)" }}>{v.body}</p>
             </div>
           ))}
         </div>
