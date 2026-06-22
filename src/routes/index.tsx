@@ -112,11 +112,11 @@ function Hero() {
 function Pain() {
   return (
     <section className="border-b border-border">
-      <div className="mx-auto max-w-2xl px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-2xl px-6 py-28 md:py-36">
         <h2 className="font-serif text-[2rem] leading-tight text-foreground md:text-4xl text-center">
           You don't have time to chase after your audience.
         </h2>
-        <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/85">
+        <div className="mt-12 space-y-8 text-lg leading-relaxed text-foreground/85">
           <p>
             You know you have valuable things to share. You know you can impact lives and make a
             difference. But you can't seem to get across the magic you know you can offer the world. 
@@ -154,11 +154,11 @@ function Dream() {
         loading="lazy"
         decoding="async"
       />
-      <div className="relative mx-auto max-w-2xl px-6 py-24 md:py-32">
+      <div className="relative mx-auto max-w-2xl px-6 py-28 md:py-36">
         <h2 className="font-serif text-[2rem] leading-tight text-foreground md:text-4xl text-center">
           What if they came after you?
         </h2>
-        <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/85">
+        <div className="mt-12 space-y-8 text-lg leading-relaxed text-foreground/85">
           <p>
             What if your ideal audience found you on their own? What if the people you most want
             to reach came to you for the opportunity to have a part in the beautiful world you are
@@ -194,7 +194,7 @@ function CurlyArrow({ className = "", flip = false }: { className?: string; flip
 function About() {
   return (
     <section id="about" className="border-b border-border">
-      <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-3xl px-6 py-28 md:py-36">
         <p className="eyebrow text-center">EVERY GOOD STORY HAS A HERO. AND EVERY GOOD HERO HAS A GUIDE.</p>
 
         <div className="mt-10 flex justify-center">
@@ -221,7 +221,7 @@ function About() {
         </p>
 
 
-        <div className="mt-12 space-y-6 text-lg leading-relaxed text-foreground/85">
+        <div className="mt-12 space-y-8 text-lg leading-relaxed text-foreground/85">
           <p>
             I'm a wife and a mother and a teacher and a friend. I'm an actress, an artist, and an
             almost-psychologist (I dropped out mid-Master's and chose to brighten the world with 
@@ -253,7 +253,7 @@ function About() {
           I'm here to help you help them.
         </p>
 
-        <div className="mt-10 space-y-6 text-lg leading-relaxed text-foreground/85">
+        <div className="mt-12 space-y-8 text-lg leading-relaxed text-foreground/85">
           <p>
             My people-connecting skills, background in psychology, and love of words combine to
             help you reach your audience with empathy, warmth, and wit — so that you can focus on
@@ -301,7 +301,7 @@ const DELIVERABLES = [
 function WhoIWorkWith() {
   return (
     <section id="who" className="border-b border-border">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6 py-28 md:py-36">
         <p className="text-center font-serif text-xl italic text-muted-foreground">
           Ok. Enough about me. Tell me about yourself.
         </p>
@@ -309,7 +309,7 @@ function WhoIWorkWith() {
           Are you a…
         </h2>
 
-        <div className="mt-14 grid gap-14 md:grid-cols-2">
+        <div className="mt-16 grid gap-16 md:grid-cols-2">
           <ul className="space-y-8">
             {CLIENT_TYPES.map(({ icon: Icon, label, body }) => (
               <li key={label} className="flex gap-4">
@@ -374,14 +374,14 @@ const SERVICES = [
 function Services() {
   return (
     <section id="services" className="border-b border-border bg-[var(--cream)]">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6 py-28 md:py-36">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-serif text-4xl leading-tight text-foreground md:text-5xl">
             Let me help you help them.
           </h2>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-16 grid gap-8 md:grid-cols-3">
           {SERVICES.map(({ art, title, body, aka, category }) => (
             <article
               key={title}
@@ -436,7 +436,7 @@ const TESTIMONIALS_ONE = [
 function TestimonialsOne() {
   return (
     <section className="border-b border-border bg-[var(--cream)]">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6 py-28 md:py-36">
         <div className="mt-2 grid gap-10 md:grid-cols-3 md:gap-8">
           {TESTIMONIALS_ONE.map((t, i) => (
             <figure key={i} className="relative rounded-2xl border border-border bg-background p-8 md:p-10">
@@ -492,14 +492,14 @@ const STEPS = [
 function Process() {
   return (
     <section id="process" className="border-b border-border">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6 py-28 md:py-36">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-serif text-4xl leading-tight text-foreground md:text-5xl">
             How it works.
           </h2>
         </div>
 
-        <ol className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+        <ol className="mt-16 grid gap-12 md:grid-cols-3 md:gap-10">
           {STEPS.map(({ n, icon: Icon, title, body }) => (
             <li key={n} className="relative text-center">
               <span
@@ -546,7 +546,7 @@ const VALUES = [
 function Values() {
   return (
     <section className="border-b border-border bg-foreground text-background">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6 py-28 md:py-36">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-serif text-4xl leading-tight md:text-5xl">
             Get your happily-ever-after.
@@ -556,7 +556,7 @@ function Values() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
+        <div className="mt-16 grid gap-10 md:grid-cols-3">
           {VALUES.map((v) => (
             <div key={v.title} className="border-t border-background/20 pt-6">
               <h3 className="font-serif text-2xl text-background">{v.title}</h3>
