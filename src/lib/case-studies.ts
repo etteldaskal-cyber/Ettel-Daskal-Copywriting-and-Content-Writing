@@ -3,6 +3,10 @@ import eretzYisrael from "@/assets/eretz-yisrael.pdf.asset.json";
 import scharVOnesh from "@/assets/schar-v-onesh.pdf.asset.json";
 import newsletterIssue from "@/assets/yyh-newsletter-issue-2.pdf.asset.json";
 import foundingTheFuture from "@/assets/founding-the-future.pdf.asset.json";
+import nuggetAd1 from "@/assets/nugget-ad-1.png.asset.json";
+import nuggetAd2 from "@/assets/nugget-ad-2.png.asset.json";
+import nuggetAd3 from "@/assets/nugget-ad-3.png.asset.json";
+import nuggetAd4 from "@/assets/nugget-ad-4.png.asset.json";
 
 export type CategorySlug =
   | "copywriting"
@@ -23,6 +27,7 @@ export type CaseStudy = {
   approach: string;
   outcome: string;
   samples: { label: string; url: string }[];
+  images?: { label: string; url: string }[];
   layout?: "default" | "book";
 };
 
@@ -145,6 +150,32 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome:
       "A repeat-commission body of work used across productions, dinners, and conventions — language people remember after the lights come up.",
     samples: [],
+  },
+  {
+    slug: "nugget-ad-series",
+    title: "Nugget Ad Series",
+    category: "Copywriting",
+    categorySlug: "copywriting",
+    hasCaseStudy: false,
+    summary:
+      "A four-piece print ad series for Nugget, charting parenting eras from 1879 to today — and landing on the brand as the modern answer.",
+    overview:
+      "A concept-driven ad series built around a historical through-line: how the cultural idea of childhood — and what 'a good home' looks like — has shifted across generations, with Nugget as the playful, modern resolution.",
+    objective:
+      "Position Nugget as more than a play couch: a product that fits the way families actually live now, told through a series with a clear narrative arc rather than four isolated ads.",
+    audience: "Parents of young children; brand and creative decision-makers at Nugget.",
+    role: "Concept, copy, and art direction across all four pieces in the series.",
+    approach:
+      "Treat the series as a single story across four frames. Each ad earns its place by moving the timeline — and the emotional read of parenthood — forward, until the final piece delivers the product as the punchline.",
+    outcome:
+      "A spec campaign sample demonstrating long-form brand thinking and series-level copy craft.",
+    samples: [],
+    images: [
+      { label: "1879", url: nuggetAd1.url },
+      { label: "2017", url: nuggetAd2.url },
+      { label: "2023", url: nuggetAd3.url },
+      { label: "Nugget", url: nuggetAd4.url },
+    ],
   },
 ];
 
