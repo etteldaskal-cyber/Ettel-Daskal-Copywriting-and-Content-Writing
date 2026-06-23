@@ -16,6 +16,7 @@ import envelopeTransparent from "@/assets/envelope-transparent.png.asset.json";
 import hats from "@/assets/magical-hats.png.asset.json";
 import plants from "@/assets/plants-sprouts.png.asset.json";
 import ettelPortrait from "@/assets/ettel-portrait.png.asset.json";
+import goldenIdea from "@/assets/golden-idea.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -173,7 +174,7 @@ function Pain() {
 /* ---------------- SECTION 3 — DREAM ---------------- */
 function Dream() {
   return (
-    <section className="paper-grain relative overflow-hidden border-b border-border bg-[var(--cream)]">
+    <section className="paper-grain relative border-b border-border bg-[var(--cream)]">
       <div className="relative mx-auto max-w-[680px] px-6">
         <h2 className="font-serif leading-tight text-foreground text-center">
           What if they came after you?
@@ -185,12 +186,24 @@ function Dream() {
             <p className="text-left">What if your website did the talking — so that when people reached out, they were already sold on what you offer the world?</p>
             <p className="text-left">What if you never had to feel like a desperate car salesman instead of the changemaker that you are?</p>
           </div>
-          <p className="partner-line">
-            You need a hard-working partner.
-          </p>
-          <p>
-            Someone to uncover the magic that is already there and write your story so that your audience gets it.
-          </p>
+          <div className="relative">
+            <p className="partner-line">
+              You need a hard-working partner.
+            </p>
+            <img
+              src={goldenIdea.url}
+              alt=""
+              aria-hidden
+              className="illustration absolute -right-8 sm:-right-16 md:-right-24 -top-6 w-44 sm:w-52 md:w-60 lg:w-72"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div className="pt-6 sm:pt-10">
+            <p>
+              Someone to uncover the magic that is already there and write your story so that your audience gets it.
+            </p>
+          </div>
         </div>
         <div className="mt-14 text-center">
           <a href="#contact" className="btn-gold">Get In Touch</a>
