@@ -513,7 +513,7 @@ const STEPS = [
     icon: Coffee,
     art: null as string | null,
     title: "We Meet",
-    body: "You tell me about your mission, your goals, your audience, and a lot more. I ask a lot of questions — get ready to go deep. (The good kind of deep.)",
+    body: "You tell me about your mission, your goals, your audience, and a lot more. I ask a lot of questions — get ready to get deep and vulnerable.",
   },
   {
     n: "02",
