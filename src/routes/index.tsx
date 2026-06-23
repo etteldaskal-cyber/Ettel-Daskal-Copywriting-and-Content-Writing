@@ -467,7 +467,7 @@ const TESTIMONIALS_ONE = [
   },
   {
     quote: "I literally sleep better at night knowing that you are part of our team.",
-    name: "Sam Schwartz",
+    name: "Project Manager",
     title: "Marketing Director, Jewish Outreach Organization",
   },
 ];
