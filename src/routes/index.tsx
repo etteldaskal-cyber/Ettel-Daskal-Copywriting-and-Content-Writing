@@ -366,7 +366,7 @@ function WhoIWorkWith() {
 
           <div className="md:pt-4 md:border-l md:border-[#E0D0B8] md:pl-10">
             <div className="rounded-2xl border border-border bg-[var(--cream)] p-8 md:sticky md:top-28 md:p-10">
-              <p className="font-serif text-2xl text-foreground">Let's:</p>
+              <p className="font-serif text-2xl text-foreground">Then Let's:</p>
               <ul className="mt-6 space-y-4">
                 {DELIVERABLES.map((d) => (
                   <li key={d} className="flex gap-3 text-base leading-loose text-foreground/85">
