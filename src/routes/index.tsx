@@ -389,7 +389,7 @@ const SERVICES = [
     art: quill.url,
     title: "Copywriting",
     body: "Websites, emails, newsletters, donor appeals, campaigns, social content — and whatever else your mission needs.",
-    aka: "a.k.a. words that connect, persuade, and inspire action.",
+    aka: "a.k.a. connecting, motivating, and inspiring action with words that work wonders.",
     category: "copywriting" as const,
   },
   {

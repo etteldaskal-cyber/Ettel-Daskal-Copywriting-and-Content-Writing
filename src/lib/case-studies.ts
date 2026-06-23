@@ -35,7 +35,7 @@ export const CATEGORIES: {
     slug: "copywriting",
     title: "Copywriting",
     intro:
-      "Websites, emails, newsletters, donor appeals, campaigns, and social content — words that connect, persuade, and inspire action.",
+      "Websites, emails, newsletters, donor appeals, campaigns, and social content — connecting, motivating, and inspiring action with words that work wonders.",
   },
   {
     slug: "organizational-storytelling",
