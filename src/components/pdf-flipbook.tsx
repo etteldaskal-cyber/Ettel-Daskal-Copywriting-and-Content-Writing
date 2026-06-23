@@ -4,7 +4,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
-// Use the bundled worker (Vite resolves the URL at build time).
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
   import.meta.url,
@@ -16,24 +15,23 @@ type Props = {
 };
 
 /**
- * One PDF page per view.
- *   - page 1 → rendered as a single portrait page
- *   - pages 2+ → each rendered as a single full-width image (each page already
- *     contains a full two-page spread in the source PDF when applicable)
- *   - navigation moves one page at a time
+ * Cover (page 1): portrait, no rotation.
+ * Pages 2+: each rotated 90° clockwise; two consecutive rotated pages shown
+ * side-by-side as a spread. Nav advances one spread (two pages) at a time,
+ * except the cover which is shown alone.
  */
 export function PdfFlipbook({ url, title }: Props) {
   const [numPages, setNumPages] = useState(0);
-  const [pageIndex, setPageIndex] = useState(1); // 1-based
+  // view 0 = cover; view 1 = pages 2&3; view 2 = pages 4&5; ...
+  const [view, setView] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(800);
 
-  // Client-only mount gate (react-pdf can't render during SSR).
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    setPageIndex(1);
+    setView(0);
     setNumPages(0);
   }, [url]);
 
@@ -47,8 +45,13 @@ export function PdfFlipbook({ url, title }: Props) {
     return () => ro.disconnect();
   }, []);
 
-  const goNext = () => setPageIndex((p) => Math.min(p + 1, numPages || p));
-  const goPrev = () => setPageIndex((p) => Math.max(p - 1, 1));
+  const totalViews = useMemo(() => {
+    if (numPages <= 1) return 1;
+    return 1 + Math.ceil((numPages - 1) / 2);
+  }, [numPages]);
+
+  const goNext = () => setView((v) => Math.min(v + 1, totalViews - 1));
+  const goPrev = () => setView((v) => Math.max(v - 1, 0));
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -64,7 +67,7 @@ export function PdfFlipbook({ url, title }: Props) {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [numPages]);
+  }, [totalViews]);
 
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const onTouchStart = (e: React.TouchEvent) => {
@@ -83,14 +86,35 @@ export function PdfFlipbook({ url, title }: Props) {
     else goPrev();
   };
 
-  // Page 1 = portrait (narrower); subsequent pages = full width spreads.
-  const renderWidth = useMemo(() => {
-    if (pageIndex === 1) {
-      // portrait — cap at ~60% of container, max 560
-      return Math.min(Math.floor(containerWidth * 0.6), 560);
-    }
-    return containerWidth;
-  }, [pageIndex, containerWidth]);
+  // Width of a single rendered PDF page.
+  // For rotated spreads: each rotated page occupies half the container width;
+  // rotation swaps width/height, so we set the pre-rotation Page width to that
+  // half-cell's HEIGHT. PDF pages are 612x792 (portrait 3:4), so a half-cell
+  // of width W has height W * (612/792) after rotation, meaning we render the
+  // page at width = W * (612/792)... actually simpler: render at a fixed
+  // pre-rotation width and let the rotated dimensions land naturally inside
+  // the half-cell using CSS transform.
+  const coverWidth = useMemo(
+    () => Math.min(Math.floor(containerWidth * 0.6), 560),
+    [containerWidth],
+  );
+  // For rotated pages: pick a pre-rotation width so the rotated HEIGHT (== its
+  // pre-rotation width) fits the half-cell width, and the rotated WIDTH
+  // (== pre-rotation height) fits a reasonable spread height.
+  const spreadPageWidth = useMemo(() => {
+    const half = (containerWidth - 0) / 2;
+    return Math.max(120, Math.floor(half));
+  }, [containerWidth]);
+
+  const { leftPage, rightPage } = useMemo(() => {
+    if (view === 0) return { leftPage: null as number | null, rightPage: null as number | null };
+    const left = 2 * view; // view 1 → 2, view 2 → 4, ...
+    const right = left + 1;
+    return {
+      leftPage: left <= numPages ? left : null,
+      rightPage: right <= numPages ? right : null,
+    };
+  }, [view, numPages]);
 
   return (
     <div className="flex flex-col items-center">
@@ -116,21 +140,60 @@ export function PdfFlipbook({ url, title }: Props) {
               </div>
             }
           >
-            <div className="mx-auto flex justify-center bg-ink/10 p-1 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)]">
-              <button
-                type="button"
-                onClick={goNext}
-                className="block bg-white shadow-md transition-shadow hover:shadow-lg"
-                aria-label="Next page"
+            {view === 0 ? (
+              <div className="mx-auto flex justify-center">
+                <button
+                  type="button"
+                  onClick={goNext}
+                  className="block bg-white shadow-md transition-shadow hover:shadow-lg"
+                  aria-label="Next page"
+                  style={{ width: coverWidth }}
+                >
+                  <Page
+                    pageNumber={1}
+                    width={coverWidth}
+                    renderAnnotationLayer={false}
+                    renderTextLayer={false}
+                  />
+                </button>
+              </div>
+            ) : (
+              <div
+                className="mx-auto grid bg-ink/10 p-1 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)]"
+                style={{ gridTemplateColumns: "1fr 1fr", gap: 0 }}
               >
-                <Page
-                  pageNumber={pageIndex}
-                  width={renderWidth}
-                  renderAnnotationLayer={false}
-                  renderTextLayer={false}
-                />
-              </button>
-            </div>
+                {[leftPage, rightPage].map((pn, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center justify-center overflow-hidden bg-white"
+                    style={{
+                      // Rotated 90° → rendered height becomes the page's pre-rotation
+                      // width. Reserve a square cell so the rotated landscape fits.
+                      aspectRatio: "1 / 1",
+                    }}
+                    onClick={i === 0 ? goPrev : goNext}
+                    role="button"
+                    aria-label={i === 0 ? "Previous spread" : "Next spread"}
+                  >
+                    {pn ? (
+                      <div
+                        style={{
+                          transform: "rotate(90deg)",
+                          transformOrigin: "center center",
+                        }}
+                      >
+                        <Page
+                          pageNumber={pn}
+                          width={spreadPageWidth}
+                          renderAnnotationLayer={false}
+                          renderTextLayer={false}
+                        />
+                      </div>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            )}
           </Document>
         ) : (
           <div className="flex h-[520px] items-center justify-center text-sm text-muted-foreground">
@@ -143,18 +206,22 @@ export function PdfFlipbook({ url, title }: Props) {
         <button
           type="button"
           onClick={goPrev}
-          disabled={pageIndex <= 1}
+          disabled={view === 0}
           className="inline-flex items-center gap-1 rounded-sm border border-border px-3 py-2 transition hover:text-foreground disabled:opacity-40"
         >
           <ChevronLeft className="h-3.5 w-3.5" /> Prev
         </button>
         <span className="font-medium">
-          {numPages === 0 ? "—" : `Page ${pageIndex} of ${numPages}`}
+          {numPages === 0
+            ? "—"
+            : view === 0
+              ? `Cover · ${numPages} pages`
+              : `Pages ${leftPage}${rightPage ? `–${rightPage}` : ""} of ${numPages}`}
         </span>
         <button
           type="button"
           onClick={goNext}
-          disabled={pageIndex >= numPages}
+          disabled={view >= totalViews - 1}
           className="inline-flex items-center gap-1 rounded-sm border border-border px-3 py-2 transition hover:text-foreground disabled:opacity-40"
         >
           Next <ChevronRight className="h-3.5 w-3.5" />
