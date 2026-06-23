@@ -195,8 +195,9 @@ export function PdfFlipbook({ url, title }: Props) {
             ? "—"
             : view === 0
               ? `Cover · ${numPages} pages`
-              : `Pages ${leftPage}${rightPage ? `–${rightPage}` : ""} of ${numPages}`}
+              : `Page ${currentPage} of ${numPages}`}
         </span>
+
         <button
           type="button"
           onClick={goNext}
