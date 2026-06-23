@@ -62,7 +62,7 @@ export function SiteFooter() {
             Writer · Educator · Storyteller
           </p>
           <p className="mt-4 max-w-xs text-sm text-background/80">
-            Copywriting for organizations that exist to help people.
+            Copy & writing for do-good organizations and brands
           </p>
         </div>
         <div className="text-sm">
