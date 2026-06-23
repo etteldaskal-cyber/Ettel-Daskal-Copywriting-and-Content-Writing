@@ -216,6 +216,14 @@
     text-align: left;
     transform: rotate(-3deg);
   }
+  .handwritten-subtitle {
+    font-family: 'Caveat', cursive;
+    font-size: 28px;
+    color: #E8B86D;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+    display: block;
+  }
   .note-arrow {
     position: absolute;
     left: 0.5rem;
