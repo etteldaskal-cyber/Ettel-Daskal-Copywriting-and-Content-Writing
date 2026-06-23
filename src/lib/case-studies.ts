@@ -27,6 +27,7 @@ export type CaseStudy = {
   approach: string;
   outcome: string;
   samples: { label: string; url: string }[];
+  images?: { label: string; url: string }[];
   layout?: "default" | "book";
 };
 
