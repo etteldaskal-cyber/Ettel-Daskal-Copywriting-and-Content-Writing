@@ -462,12 +462,12 @@ const TESTIMONIALS_ONE = [
   },
   {
     quote: "An unbelievably gorgeous and moving piece.",
-    name: "Project Manager",
-    title: "Oorah (Jewish Outreach Organization)",
+    name: "Non-Profit Client",
+    title: "",
   },
   {
     quote: "I literally sleep better at night knowing that you are part of our team.",
-    name: "Project Manager",
+    name: "Non-Profit Client",
     title: "Marketing Director, Jewish Outreach Organization",
   },
 ];
@@ -490,7 +490,7 @@ function TestimonialsOne() {
               </blockquote>
               <figcaption className="mt-8 text-sm text-foreground">
                 {t.name && <span className="font-semibold">— {t.name}</span>}
-                {t.name && t.title && <span className="text-muted-foreground">, </span>}
+                {t.name && t.title && <span className="text-muted-foreground"> </span>}
                 {!t.name && <span>— </span>}
                 <span className="text-muted-foreground">{t.title}</span>
               </figcaption>
