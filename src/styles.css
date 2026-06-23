@@ -210,8 +210,8 @@
     color: #E8B86D;
     line-height: 1.2;
     position: absolute;
-    left: -2rem;
-    top: -3.5rem;
+    left: -5rem;
+    top: -6rem;
     max-width: 220px;
     text-align: left;
     transform: rotate(-3deg);
@@ -226,8 +226,8 @@
   }
   .note-arrow {
     position: absolute;
-    left: 0.5rem;
-    top: 2.5rem;
+    left: -2rem;
+    top: 0.5rem;
     width: 180px;
     height: auto;
     opacity: 0.9;
