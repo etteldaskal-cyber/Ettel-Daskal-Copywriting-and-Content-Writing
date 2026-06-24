@@ -234,9 +234,9 @@ function CurlyArrow({ className = "", flip = false }: { className?: string; flip
 /* ---------------- UP-RIGHT ARROW (to portrait) ---------------- */
 function UpRightArrow({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 130 60" className={className} aria-hidden>
-      <path d="M5 50 Q 35 58, 55 38 T 110 15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-      <path d="M110 15 L 100 17 M110 15 L 106 25" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    <svg viewBox="0 0 170 90" className={className} aria-hidden>
+      <path d="M5 80 Q 55 88, 85 50 T 150 20" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M150 20 L 140 22 M150 20 L 144 30" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
     </svg>
   );
 }
@@ -256,9 +256,9 @@ function About() {
             <h2 className="font-serif leading-tight text-foreground m-0 text-center">
               Hi, I'm Ettel.
             </h2>
-            <div className="absolute -right-4 -top-12 sm:-right-10 sm:-top-20" style={{ width: "130px", height: "60px" }}>
+            <div className="pointer-events-none absolute -right-4 bottom-0 sm:-right-8 sm:bottom-1" style={{ width: "170px", height: "90px" }}>
               <UpRightArrow className="absolute inset-0 h-full w-full text-[color:var(--gold)]" />
-              <span className="guide-label absolute right-0 top-0 m-0 whitespace-nowrap">
+              <span className="guide-label absolute right-0 top-0 m-0 -translate-y-1/2 translate-x-1 whitespace-nowrap">
                 a.k.a. your guide
               </span>
             </div>
