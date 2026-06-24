@@ -5,7 +5,7 @@ const NAV = [
   { href: "/#who", label: "Who I Help" },
   { href: "/#services", label: "Services" },
   { href: "/#process", label: "Process" },
-  { to: "/portfolio", label: "Portfolio" },
+  { to: "/portfolio", label: "Work" },
 ];
 
 export function SiteNav() {
