@@ -73,7 +73,6 @@ export function SiteFooter() {
             <li><a href="/#about" className="text-background/85 hover:text-background">About</a></li>
             <li><a href="/#services" className="text-background/85 hover:text-background">Services</a></li>
             <li><Link to="/work/$category" params={{ category: "copywriting" }} className="text-background/85 hover:text-background">Work</Link></li>
-            <li><Link to="/portfolio" className="text-background/85 hover:text-background">Portfolio</Link></li>
           </ul>
         </div>
         <div className="text-sm">
