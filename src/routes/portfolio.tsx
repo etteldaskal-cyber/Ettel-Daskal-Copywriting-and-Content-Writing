@@ -35,14 +35,9 @@ function PortfolioPage() {
           return (
             <section key={category.slug} className="border-b border-border">
               <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-                <div className="max-w-3xl">
-                  <h2 className="font-serif text-4xl leading-tight text-foreground md:text-5xl">
+                <h2 className="font-serif text-4xl leading-tight text-foreground md:text-5xl">
                     {category.title}
                   </h2>
-                  <p className="mt-4 text-lg leading-loose text-foreground/80">
-                    {category.intro}
-                  </p>
-                </div>
 
                 <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                   {items.map((cs) => (
@@ -53,9 +48,6 @@ function PortfolioPage() {
                       <h3 className="font-serif text-2xl text-foreground">
                         {cs.title}
                       </h3>
-                      <p className="mt-3 flex-1 text-base leading-loose text-foreground/80">
-                        {cs.summary}
-                      </p>
 
                       {cs.samples.length > 0 && (
                         <ul className="mt-6 space-y-2">
@@ -74,15 +66,6 @@ function PortfolioPage() {
                           ))}
                         </ul>
                       )}
-
-                      <Link
-                        to="/work/$category"
-                        params={{ category: category.slug }}
-                        className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-foreground hover:underline"
-                      >
-                        View {category.title.toLowerCase()} samples
-                        <ArrowRight className="h-3.5 w-3.5" />
-                      </Link>
                     </article>
                   ))}
                 </div>
