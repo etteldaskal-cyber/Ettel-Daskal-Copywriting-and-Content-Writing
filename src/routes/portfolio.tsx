@@ -1,5 +1,5 @@
-import { Link, createFileRoute } from "@tanstack/react-router";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { ExternalLink } from "lucide-react";
 import { SiteNav, SiteFooter } from "@/components/site-chrome";
 import { CATEGORIES, CASE_STUDIES } from "@/lib/case-studies";
 
@@ -76,20 +76,12 @@ function PortfolioPage() {
 
         <section className="border-b border-border bg-[var(--cream)]">
           <div className="mx-auto max-w-3xl px-6 py-20 text-center">
-            <p className="font-serif text-2xl text-foreground">
-              Want to see something specific?
-            </p>
-            <p className="mt-4 text-foreground/80">
-              I'd be happy to pull together a few samples matched to your project.
-            </p>
-            <p className="mt-6">
-              <a
-                href="mailto:etteldaskal@gmail.com"
-                className="btn-gold inline-flex items-center gap-2"
-              >
-                Request Samples
-              </a>
-            </p>
+            <a
+              href="mailto:etteldaskal@gmail.com"
+              className="btn-gold inline-flex items-center gap-2"
+            >
+              Request Samples
+            </a>
           </div>
         </section>
       </main>
