@@ -342,7 +342,7 @@ const CLIENT_TYPES = [
   {
     icon: Globe2,
     label: "Nonprofit or charity",
-    body: "Ready to turn your mission into words that move people to open their hearts — and their wallets?",
+    body: "Ready to turn your mission into words that move people to open their hearts (ok, and their wallets?)",
   },
   {
     icon: BookOpen,
