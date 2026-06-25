@@ -274,6 +274,15 @@ export function PdfFlipbook({ url, title, mode = "spread" }: Props) {
                   />
                 </button>
               </div>
+            ) : mode === "single" ? (
+              <button
+                type="button"
+                onClick={goNext}
+                aria-label="Next page"
+                className="mx-auto block bg-ink/10 p-1 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)]"
+              >
+                {renderSinglePage(leftPage)}
+              </button>
             ) : (
               <button
                 type="button"
