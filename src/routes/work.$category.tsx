@@ -1,14 +1,43 @@
-import { useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
 import { SiteNav, SiteFooter } from "@/components/site-chrome";
-import { PdfFlipbook } from "@/components/pdf-flipbook.client";
 import {
   getCategory,
   getCaseStudiesByCategory,
   type CategorySlug,
   type CaseStudy,
 } from "@/lib/case-studies";
+
+const PdfFlipbook = lazy(() =>
+  import("@/components/pdf-flipbook.client").then((module) => ({
+    default: module.PdfFlipbook,
+  })),
+);
+
+function PdfFlipbookFallback() {
+  return (
+    <div className="flex h-[520px] items-center justify-center text-sm text-muted-foreground">
+      Loading book…
+    </div>
+  );
+}
+
+function ClientOnlyPdfFlipbook({ url, title }: { url: string; title?: string }) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return <PdfFlipbookFallback />;
+
+  return (
+    <Suspense fallback={<PdfFlipbookFallback />}>
+      <PdfFlipbook url={url} title={title} />
+    </Suspense>
+  );
+}
 
 function isPdf(url: string) {
   return /\.pdf(\?|$)/i.test(url);
@@ -155,7 +184,7 @@ function InlineSamples({ cs }: { cs: CaseStudy }) {
 
         {active && (
           <div className="mt-8">
-            <PdfFlipbook url={active.url} title={active.label} />
+            <ClientOnlyPdfFlipbook url={active.url} title={active.label} />
             <a
               href={active.url}
               target="_blank"
