@@ -54,9 +54,10 @@ export function PdfFlipbook({ url, title, mode = "spread" }: Props) {
 
   const totalViews = useMemo(() => {
     if (numPages <= 1) return 1;
+    if (mode === "single") return numPages;
     // view 0 = cover (page 1); remaining pages grouped in pairs
     return 1 + Math.ceil((numPages - 1) / 2);
-  }, [numPages]);
+  }, [numPages, mode]);
 
   const goNext = () => setView((v) => Math.min(v + 1, totalViews - 1));
   const goPrev = () => setView((v) => Math.max(v - 1, 0));
