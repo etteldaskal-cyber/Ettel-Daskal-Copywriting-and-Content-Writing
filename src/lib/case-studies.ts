@@ -169,6 +169,115 @@ Upon my heart, deep in my soul
 Another link in our chain of solid gold
 You're etched in my heart, in my heart Bnos Bais Yaakov!`,
       },
+      {
+        title: "Standing at My Future's Gates",
+        subtitle: "Original lyrics for an event production",
+        body: `Standing at my future's gates
+
+The hands of time, they seem to freeze
+
+In her hands, she holds the key
+
+
+
+A golden world lies here before me with
+
+Tinkled laughter, tulle and dreams
+
+Whispering my name, it seems
+
+
+
+Beneath my feet, the earth is quaking
+
+Inside my soul, a storm brews
+
+I can't do this – I can't choose!
+
+
+
+Colors whirling in my head
+
+they say this world is black and white
+
+To me – it all looks grey
+
+Help me,  lest I stray!
+
+
+
+All…All I yearn for lies here before me
+
+If I go take that step am I leaving my life
+
+behind me?
+
+Can I….. Can I hold on, though it be stormy?
+
+Can I promise this won't change me?
+
+Can I promise this won't change me?
+
+
+
+Straddling the dark and light
+
+Is there no answer to this fight
+
+But to let go, and then hold tight
+
+
+
+A paradox, to be a man
+
+Like the stars, yet also sand
+
+And I don't know where I stand
+
+
+
+The world's too big
+
+My home's to small
+
+My destiny – I hear its call
+
+Oh I'm heady – still a child!
+
+
+
+All…All I yearn for lies here before me
+
+If I go take that step am I leaving my life
+
+behind me?
+
+Can I... Can I hold on, though it be stormy?
+
+Can I promise this won't change me?
+
+Can I promise this won't change me?
+
+
+
+All…All I yearn for lies here before me
+
+But – ma ani, umah chayay biladecha?
+
+Can I….. can I hold on, though it be stormy?
+
+Beyom ekrah maheir aneni!
+
+Beyom ekrah maheir aneni!
+
+
+
+Standing here like those before me
+
+I know what I must do –
+
+I must choose!`,
+      },
     ],
   },
   {
