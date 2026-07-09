@@ -1,8 +1,8 @@
-import matanTorah from "@/assets/matan-torah.pdf.asset.json";
-import eretzYisrael from "@/assets/eretz-yisrael.pdf.asset.json";
-import scharVOnesh from "@/assets/schar-v-onesh.pdf.asset.json";
-import newsletterIssue from "@/assets/yyh-newsletter-issue-2.pdf.asset.json";
-import foundingTheFuture from "@/assets/founding-the-future.pdf.asset.json";
+import matanTorah from "@/assets/matan-torah.pdf";
+import eretzYisrael from "@/assets/eretz-yisrael.pdf";
+import scharVOnesh from "@/assets/schar-v-onesh.pdf";
+import newsletterIssue from "@/assets/yyh-newsletter-issue-2.pdf";
+import foundingTheFuture from "@/assets/founding-the-future.pdf";
 import nuggetAd1 from "@/assets/nugget-ad-1.png";
 import nuggetAd2 from "@/assets/nugget-ad-2.png";
 import nuggetAd3 from "@/assets/nugget-ad-3.png";
@@ -78,9 +78,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome:
       "Over 12,500 copies of the Torah Nugget educational resource printed and distributed, with the series continuing as a flagship Torah Mate publication.",
     samples: [
-      { label: "Matan Torah (PDF)", url: matanTorah.url },
-      { label: "Eretz Yisrael (PDF)", url: eretzYisrael.url },
-      { label: "Schar V'Onesh (PDF)", url: scharVOnesh.url },
+      { label: "Matan Torah (PDF)", url: matanTorah },
+      { label: "Eretz Yisrael (PDF)", url: eretzYisrael },
+      { label: "Schar V'Onesh (PDF)", url: scharVOnesh },
     ],
   },
   {
@@ -103,7 +103,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome:
       "A polished, gift-quality publication that gave the organization a lasting way to thank, retain, and deepen relationships with key donors.",
     samples: [
-      { label: "Founding the Future (PDF)", url: foundingTheFuture.url },
+      { label: "Founding the Future (PDF)", url: foundingTheFuture },
     ],
     layout: "book",
   },
@@ -347,7 +347,7 @@ I must choose!`,
     outcome:
       "Although it was never positioned as a fundraising campaign, the newsletter organically generated $10,000 in donations from a single issue and significantly increased community engagement.",
     samples: [
-      { label: "Newsletter — Sample Issue (PDF)", url: newsletterIssue.url },
+      { label: "Newsletter — Sample Issue (PDF)", url: newsletterIssue },
     ],
   },
   {
