@@ -3,10 +3,10 @@ import eretzYisrael from "@/assets/eretz-yisrael.pdf.asset.json";
 import scharVOnesh from "@/assets/schar-v-onesh.pdf.asset.json";
 import newsletterIssue from "@/assets/yyh-newsletter-issue-2.pdf.asset.json";
 import foundingTheFuture from "@/assets/founding-the-future.pdf.asset.json";
-import nuggetAd1 from "@/assets/nugget-ad-1.png.asset.json";
-import nuggetAd2 from "@/assets/nugget-ad-2.png.asset.json";
-import nuggetAd3 from "@/assets/nugget-ad-3.png.asset.json";
-import nuggetAd4 from "@/assets/nugget-ad-4.png.asset.json";
+import nuggetAd1 from "@/assets/nugget-ad-1.png";
+import nuggetAd2 from "@/assets/nugget-ad-2.png";
+import nuggetAd3 from "@/assets/nugget-ad-3.png";
+import nuggetAd4 from "@/assets/nugget-ad-4.png";
 
 export type CategorySlug =
   | "copywriting"
@@ -300,10 +300,10 @@ I must choose!`,
       "A spec campaign sample demonstrating long-form brand thinking and series-level copy craft.",
     samples: [],
     images: [
-      { label: "1879", url: nuggetAd1.url },
-      { label: "2017", url: nuggetAd2.url },
-      { label: "2023", url: nuggetAd3.url },
-      { label: "Nugget", url: nuggetAd4.url },
+      { label: "1879", url: nuggetAd1 },
+      { label: "2017", url: nuggetAd2 },
+      { label: "2023", url: nuggetAd3 },
+      { label: "Nugget", url: nuggetAd4 },
     ],
   },
   {
