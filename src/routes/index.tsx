@@ -3,20 +3,20 @@ import { Globe2, Building2, Coffee, BookOpen, Heart } from "lucide-react";
 
 
 import { SiteNav, SiteFooter } from "@/components/site-chrome";
-import wingedGlobe from "@/assets/winged-globe.png.asset.json";
-import heroBackground from "@/assets/hero-background.png.asset.json";
+import wingedGlobe from "@/assets/winged-globe.png";
+import heroBackground from "@/assets/hero-background.png";
 
-import clippedWings from "@/assets/clipped-wings.png.asset.json";
-import sunMotif from "@/assets/sun-motif.png.asset.json";
+import clippedWings from "@/assets/clipped-wings.png";
+import sunMotif from "@/assets/sun-motif.png";
 
-import quill from "@/assets/quill.jpg.asset.json";
-import spellingWorksheet from "@/assets/spelling-worksheet-v2.png.asset.json";
-import envelopeTransparent from "@/assets/envelope-transparent.png.asset.json";
+import quill from "@/assets/quill.jpg";
+import spellingWorksheet from "@/assets/spelling-worksheet-v2.png";
+import envelopeTransparent from "@/assets/envelope-transparent.png";
 
-import hats from "@/assets/magical-hats.png.asset.json";
-import plants from "@/assets/plants-sprouts.png.asset.json";
-import ettelPortrait from "@/assets/ettel-portrait.png.asset.json";
-import storybookSpread from "@/assets/storybook-spread.png.asset.json";
+import hats from "@/assets/magical-hats.png";
+import plants from "@/assets/plants-sprouts.png";
+import ettelPortrait from "@/assets/ettel-portrait.png";
+import storybookSpread from "@/assets/storybook-spread.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,9 +34,9 @@ export const Route = createFileRoute("/")({
           "Copywriting and storytelling for mission-driven organizations and purpose-led brands. Reach the people who need you most.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: wingedGlobe.url },
+      { property: "og:image", content: wingedGlobe },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: wingedGlobe.url },
+      { name: "twitter:image", content: wingedGlobe },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -80,7 +80,7 @@ function PlantsDivider() {
   return (
     <div className="flex justify-center border-b border-border py-10">
       <img
-        src={plants.url}
+        src={plants}
         alt=""
         aria-hidden
         className="h-48 w-auto select-none object-contain illustration md:h-[16rem]"
@@ -99,7 +99,7 @@ function Hero() {
         aria-hidden
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${heroBackground.url})`,
+          backgroundImage: `url(${heroBackground})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: 0.25,
@@ -160,7 +160,7 @@ function Pain() {
           Your wings are clipped.
         </p>
         <img
-          src={clippedWings.url}
+          src={clippedWings}
           alt=""
           aria-hidden
           className="mx-auto mt-10 select-none illustration"
@@ -181,7 +181,7 @@ function Dream() {
         aria-hidden
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${storybookSpread.url})`,
+          backgroundImage: `url(${storybookSpread})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -250,7 +250,7 @@ function About() {
 
         <div className="mt-8 flex flex-col items-center text-center">
           <div className="portrait-frame">
-            <img src={ettelPortrait.url} alt="Ettel Daskal" loading="lazy" decoding="async" />
+            <img src={ettelPortrait} alt="Ettel Daskal" loading="lazy" decoding="async" />
           </div>
           <div className="relative mt-6 inline-block">
             <h2 className="font-serif leading-tight text-foreground m-0 text-center">
@@ -268,7 +268,7 @@ function About() {
         <div className="mt-14">
           <div className="space-y-6 text-foreground/85">
             <img
-              src={sunMotif.url}
+              src={sunMotif}
               alt=""
               aria-hidden
               className="illustration sun-float"
@@ -280,7 +280,7 @@ function About() {
             </p>
             <p>
               <img
-                src={spellingWorksheet.url}
+                src={spellingWorksheet}
                 alt=""
                 aria-hidden
                 className="illustration"
@@ -305,7 +305,7 @@ function About() {
             </p>
             <p>
               <img
-                src={hats.url}
+                src={hats}
                 alt=""
                 aria-hidden
                 className="illustration"
@@ -420,21 +420,21 @@ function WhoIWorkWith() {
 /* ---------------- SECTION 6 — SERVICES ---------------- */
 const SERVICES = [
   {
-    art: quill.url,
+    art: quill,
     title: "Copywriting",
     body: "Websites, emails, donor appeals, campaigns.",
     aka: "a.k.a.\u00a0 inspire action with words that work.",
     category: "copywriting" as const,
   },
   {
-    art: quill.url,
+    art: quill,
     title: "Storytelling",
     body: "Donor impact books, newsletters, lyrics.",
     aka: "a.k.a. bring the story inside your data to life.",
     category: "organizational-storytelling" as const,
   },
   {
-    art: quill.url,
+    art: quill,
     title: "Educational Content",
     body: "Curriculum, lesson plans, educational series.",
     aka: "a.k.a. spread ideas with clear and engaging writing.",
@@ -699,7 +699,7 @@ function Contact() {
     <section id="contact" className="bg-background">
       <div className="mx-auto max-w-[680px] px-6 py-28 text-center md:py-36">
         <img
-          src={envelopeTransparent.url}
+          src={envelopeTransparent}
           alt=""
           aria-hidden
           className="select-none"
