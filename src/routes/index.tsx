@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Globe2, Building2, Coffee, BookOpen, Heart } from "lucide-react";
 
@@ -685,6 +686,54 @@ function GentleNudge() {
 }
 
 /* ---------------- SECTION 12 — CONTACT ---------------- */
+function ContactForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const body = `${message}\n\n—\n${name}${email ? `\n${email}` : ""}`;
+    const href = `mailto:etteldaskal@gmail.com?subject=${encodeURIComponent(
+      subject.trim() || `Project inquiry from ${name.trim() || "your website"}`
+    )}&body=${encodeURIComponent(body)}`;
+    window.location.href = href;
+  };
+
+  const field =
+    "w-full rounded-xl border border-border bg-background px-4 py-3 text-base text-foreground outline-none transition-colors focus:border-[color:var(--gold)]";
+
+  return (
+    <form onSubmit={onSubmit} className="mx-auto mt-10 max-w-[520px] space-y-4 text-left">
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label htmlFor="cf-name" className="mb-2 block text-sm text-foreground/75">Name</label>
+          <input id="cf-name" required maxLength={100} value={name} onChange={(e) => setName(e.target.value)} className={field} />
+        </div>
+        <div>
+          <label htmlFor="cf-email" className="mb-2 block text-sm text-foreground/75">Email</label>
+          <input id="cf-email" type="email" required maxLength={255} value={email} onChange={(e) => setEmail(e.target.value)} className={field} />
+        </div>
+      </div>
+      <div>
+        <label htmlFor="cf-subject" className="mb-2 block text-sm text-foreground/75">Subject</label>
+        <input id="cf-subject" maxLength={150} value={subject} onChange={(e) => setSubject(e.target.value)} className={field} />
+      </div>
+      <div>
+        <label htmlFor="cf-message" className="mb-2 block text-sm text-foreground/75">Tell me about your project</label>
+        <textarea id="cf-message" required rows={6} maxLength={2000} value={message} onChange={(e) => setMessage(e.target.value)} className={field} />
+      </div>
+      <div className="pt-2 text-center">
+        <button type="submit" className="btn-gold">SEND MESSAGE</button>
+        <p className="mt-3 text-sm text-muted-foreground">
+          This opens your email app with the message ready to send.
+        </p>
+      </div>
+    </form>
+  );
+}
+
 function Contact() {
   return (
     <section id="contact" className="bg-background">
@@ -705,18 +754,16 @@ function Contact() {
           If you're working on something meaningful and need help finding the words for it — I'd
           love to hear about it.
         </p>
-        <p className="mt-6">
+        <ContactForm />
+        <p className="mt-8 text-sm text-muted-foreground">
+          Or email me directly at{" "}
           <a href="mailto:etteldaskal@gmail.com" className="text-[color:var(--teal)] hover:underline">
             etteldaskal@gmail.com
           </a>
         </p>
-        <div className="mt-8 flex justify-center">
-          <a href="mailto:etteldaskal@gmail.com" className="btn-gold">
-            GET IN TOUCH
-          </a>
-        </div>
       </div>
     </section>
   );
 }
+
 
