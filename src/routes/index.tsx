@@ -413,7 +413,7 @@ const SERVICES = [
   {
     art: quill,
     title: "Copywriting",
-    body: "Websites, emails, donor appeals, campaigns.",
+    body: "Websites, emails, campaigns.",
     aka: "a.k.a.\u00a0 inspire action with words that work.",
     category: "copywriting" as const,
   },
@@ -426,7 +426,7 @@ const SERVICES = [
   },
   {
     art: quill,
-    title: "Educational Content",
+    title: "Education",
     body: "Curricula, educational series.",
     aka: "a.k.a. spread ideas with clear and engaging writing.",
     category: "educational-content" as const,
