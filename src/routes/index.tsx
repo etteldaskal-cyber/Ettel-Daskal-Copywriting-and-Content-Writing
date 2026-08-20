@@ -427,7 +427,7 @@ const SERVICES = [
   {
     art: quill,
     title: "Educational Content",
-    body: "Curriculum, lesson plans, educational series.",
+    body: "Curricula, educational series.",
     aka: "a.k.a. spread ideas with clear and engaging writing.",
     category: "educational-content" as const,
   },
