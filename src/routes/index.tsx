@@ -421,7 +421,7 @@ const SERVICES = [
   {
     art: quill,
     title: "Storytelling",
-    body: "Donor impact books, newsletters, lyrics.",
+    body: "Donor gifts, newsletters, lyrics.",
     aka: "a.k.a. bring the story inside your data to life.",
     category: "organizational-storytelling" as const,
   },
