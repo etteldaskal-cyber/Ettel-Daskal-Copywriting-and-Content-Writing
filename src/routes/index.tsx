@@ -153,7 +153,8 @@ function Pain() {
 </p>
           <p>
 </p>
-          <p>You're not reaching the people you should — and it's costing you time, money, and energy.</p>
+          <p>
+</p>
         </div>
         <p className="wings-line" style={{ color: "var(--gold)" }}>
           Your wings are clipped.
