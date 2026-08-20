@@ -15,7 +15,6 @@ import envelopeTransparent from "@/assets/envelope-transparent.png";
 
 import hats from "@/assets/magical-hats.png";
 import plants from "@/assets/plants-sprouts.png";
-import ettelPortrait from "@/assets/ettel-portrait.png";
 import storybookSpread from "@/assets/storybook-spread.png";
 
 export const Route = createFileRoute("/")({
