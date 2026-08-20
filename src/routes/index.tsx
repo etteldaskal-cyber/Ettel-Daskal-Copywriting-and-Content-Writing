@@ -461,7 +461,7 @@ function Services() {
               />
               <h3 className="mt-6 font-serif text-2xl text-foreground">{title}</h3>
               <p className="mt-3 text-base leading-loose text-foreground/80">{body}</p>
-              <p className="mt-4 font-serif text-base italic text-muted-foreground">{aka}</p>
+              <p className="mt-8 font-serif text-base italic text-muted-foreground">{aka}</p>
               <Link
                 to="/work/$category"
                 params={{ category }}
