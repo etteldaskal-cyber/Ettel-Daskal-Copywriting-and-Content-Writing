@@ -248,10 +248,7 @@ function About() {
         <p className="eyebrow text-center">EVERY GOOD STORY HAS A HERO. AND EVERY GOOD HERO HAS A GUIDE.</p>
 
         <div className="mt-8 flex flex-col items-center text-center">
-          <div className="portrait-frame">
-            <img src={ettelPortrait} alt="Ettel Daskal" loading="lazy" decoding="async" />
-          </div>
-          <div className="relative mt-6 inline-block">
+          <div className="relative inline-block">
             <h2 className="font-serif leading-tight text-foreground m-0 text-center">
               Hi, I'm Ettel.
             </h2>
