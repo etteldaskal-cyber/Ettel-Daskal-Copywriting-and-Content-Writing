@@ -15,7 +15,6 @@ import envelopeTransparent from "@/assets/envelope-transparent.png";
 
 import hats from "@/assets/magical-hats.png";
 import plants from "@/assets/plants-sprouts.png";
-import ettelPortrait from "@/assets/ettel-portrait.png";
 import storybookSpread from "@/assets/storybook-spread.png";
 
 export const Route = createFileRoute("/")({
@@ -249,10 +248,7 @@ function About() {
         <p className="eyebrow text-center">EVERY GOOD STORY HAS A HERO. AND EVERY GOOD HERO HAS A GUIDE.</p>
 
         <div className="mt-8 flex flex-col items-center text-center">
-          <div className="portrait-frame">
-            <img src={ettelPortrait} alt="Ettel Daskal" loading="lazy" decoding="async" />
-          </div>
-          <div className="relative mt-6 inline-block">
+          <div className="relative inline-block">
             <h2 className="font-serif leading-tight text-foreground m-0 text-center">
               Hi, I'm Ettel.
             </h2>
@@ -533,7 +529,7 @@ function TestimonialsOne() {
         </div>
         <div className="mt-14 flex flex-wrap items-center justify-center gap-3">
           <a href="#contact" className="btn-gold">Get In Touch</a>
-          <Link to="/work" className="btn-teal-outline">View My Work</Link>
+          <Link to="/work/$category" params={{ category: "copywriting" }} className="btn-teal-outline">View My Work</Link>
         </div>
       </div>
     </section>
