@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Globe2, Building2, Coffee, BookOpen, Heart } from "lucide-react";
 
