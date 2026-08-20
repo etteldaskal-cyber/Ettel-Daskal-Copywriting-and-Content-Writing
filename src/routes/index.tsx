@@ -529,7 +529,7 @@ function TestimonialsOne() {
         </div>
         <div className="mt-14 flex flex-wrap items-center justify-center gap-3">
           <a href="#contact" className="btn-gold">Get In Touch</a>
-          <Link to="/work" className="btn-teal-outline">View My Work</Link>
+          <Link to="/work/$category" params={{ category: "copywriting" }} className="btn-teal-outline">View My Work</Link>
         </div>
       </div>
     </section>
