@@ -198,7 +198,7 @@ function Dream() {
           <div className="what-if-body">
             <p className="text-left">What if you had the perfect words to powerfully get your message across?</p>
             <p className="text-left">What if the people you most want to reach came to you for the opportunity to have a part in what you're building?</p>
-            <p className="text-left">What if your website did the talking — so that when people reached out, you already knew you were a good fit for each other?</p>
+            
             <p className="text-left">What if you never had to feel like a desperate car salesman instead of the changemaker that you are?</p>
           </div>
           <div>
