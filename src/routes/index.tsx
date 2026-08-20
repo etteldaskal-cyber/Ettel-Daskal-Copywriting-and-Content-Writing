@@ -465,7 +465,7 @@ function Services() {
               <Link
                 to="/work/$category"
                 params={{ category }}
-                className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-[color:var(--teal)] hover:underline"
+                className="mt-12 inline-flex items-center gap-1 text-sm font-medium text-[color:var(--teal)] hover:underline"
               >
                 See Samples →
               </Link>
