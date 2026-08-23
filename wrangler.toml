@@ -1,1 +1,2 @@
-name = "ettel-daskal-copywriting-and-content-writing" pages_build_output_dir = "dist/client"
+name = "ettel-daskal-copywriting-and-content-writing"
+pages_build_output_dir = "dist"
